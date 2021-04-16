@@ -1,0 +1,312 @@
+/**
+ * @name Show programming language
+ * @author Bat-Husky
+ * @version 1
+ * @description A theme that displays programming language.
+ * @invite kcb3jke
+ */
+
+:root {
+  --spacing: 10px;
+  --spacing-double: calc(var(--spacing) * 2);
+  --spacing-triple: calc(var(--spacing) * 3);
+}
+
+
+#app-mount pre code {
+  position: relative;
+  box-sizing: border-box;
+  padding: 25px 0.25em 0.15em 34px !important;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height);
+  border-radius: 8px;
+  color: var(--syntax-grey-alt);
+}
+#app-mount pre code:before {
+  content: "Unknown Language";
+  width: 100%;
+  height: 24px;
+  top: 0;
+  left: 0;
+  color: var(--text-normal);
+  border-bottom: 1px solid var(--base-border);
+  font-size: 1em;
+  font-weight: var(--font-weight-normal);
+  padding: 0 calc(var(--spacing) + 20px);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: var(--background-light);
+  box-sizing: border-box;
+  font-family: var(--font-family-sans-serif);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#app-mount pre code:after {
+  content: "";
+  width: 24px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 var(--spacing-third);
+  -webkit-mask: url('data:image/svg+xml; utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg>') center/12px no-repeat;
+  background: var(--text-normal);
+}
+#app-mount code,
+#app-mount pre code[class~=hljs]:before {
+  content: "Plain Text";
+}
+#app-mount pre code[class~=diff i]:before {
+  content: "Diff";
+}
+#app-mount pre code[class~=cs i]:before, #app-mount pre code[class~=csharp i]:before {
+  content: "C#";
+}
+#app-mount pre code[class~=ini i]:before {
+  content: "Initialization File";
+}
+#app-mount pre code[class~=autohotkey i]:before {
+  content: "AutoHotkey";
+}
+#app-mount pre code[class~=asciidoc i]:before {
+  content: "Ascii";
+}
+#app-mount pre code[class~=TOML i]:before {
+  content: "TOML";
+}
+#app-mount pre code[class~=nginx i]:before {
+  content: "NGINX";
+}
+#app-mount pre code[class~=perl i]:before {
+  content: "Perl";
+}
+#app-mount pre code[class~=d i]:before {
+  content: "d";
+}
+#app-mount pre code[class~=javascript i]:before, #app-mount pre code[class~=js i]:before {
+  content: "Javascript";
+}
+#app-mount pre code[class~=css i]:before {
+  content: "Cascading Style Sheet";
+}
+#app-mount pre code[class~=bash i]:before {
+  content: "Bash";
+}
+#app-mount pre code[class~=markdown i]:before, #app-mount pre code[class~=md i]:before {
+  content: "Markdown";
+}
+#app-mount pre code[class~=html i]:before {
+  content: "HTML";
+}
+#app-mount pre code[class~=xl i]:before {
+  content: "eXtensible Language";
+}
+#app-mount pre code[class~=coffee i]:before {
+  content: "CoffeeScript";
+}
+#app-mount pre code[class~=ruby i]:before {
+  content: "Ruby";
+}
+#app-mount pre code[class~=sql i]:before {
+  content: "SQL";
+}
+#app-mount pre code[class~=java i]:before {
+  content: "Java";
+}
+#app-mount pre code[class~=py i]:before, #app-mount pre code[class~=python i]:before {
+  content: "Python";
+}
+#app-mount pre code[class~=vb i]:before, #app-mount pre code[class~=visualbasic i]:before, #app-mount pre code[class~=vbs i]:before {
+  content: "Visual Basic";
+}
+#app-mount pre code[class~=lua i]:before {
+  content: "Lua";
+}
+#app-mount pre code[class~=php i]:before {
+  content: "Php";
+}
+#app-mount pre code[class~=swift i]:before {
+  content: "Swift";
+}
+#app-mount pre code[class~=makefile i]:before {
+  content: "Makefile";
+}
+#app-mount pre code[class~=go i]:before {
+  content: "Go";
+}
+#app-mount pre code[class~=rust i]:before {
+  content: "Rust";
+}
+#app-mount pre code[class~=prolog i]:before {
+  content: "Prolog";
+}
+#app-mount pre code[class~=ts i]:before, #app-mount pre code[class~=typescript i]:before {
+  content: "TypeScript";
+}
+#app-mount pre code[class~=http i]:before {
+  content: "HyperText Transfer Protocol";
+}
+#app-mount pre code[class~=json i]:before {
+  content: "JSON";
+}
+#app-mount pre code[class~=xml i]:before {
+  content: "XML";
+}
+#app-mount pre code[class~=less i]:before {
+  content: "Less";
+}
+#app-mount pre code[class~=sass i]:before, #app-mount pre code[class~=scss i]:before {
+  content: "SCSS";
+}
+#app-mount pre code[class~=elm i]:before {
+  content: "Elm";
+}
+#app-mount pre code[class~=cpp i]:before {
+  content: "C++";
+}
+#app-mount pre code[class~=hbs i]:before {
+  content: "Handlebars";
+}
+#app-mount pre code[class~="1c" i]:before {
+  content: "1c";
+}
+#app-mount pre code[class~=abnf i]:before {
+  content: "ABNF";
+}
+#app-mount pre code[class~=clojure i]:before {
+  content: "Clojure";
+}
+#app-mount pre code[class~=objc i]:before {
+  content: "Objective-C";
+}
+#app-mount pre code[class~=yaml i]:before {
+  content: "YAML";
+}
+#app-mount pre code[class~=shell i]:before, #app-mount pre code[class~=sh i]:before {
+  content: "Shell";
+}
+#app-mount pre code[class~=kotlin i]:before {
+  content: "Kotlin";
+}
+#app-mount pre code[class~=apache i]:before {
+  content: "Apache";
+}
+#app-mount pre code[class~=stylus i]:before {
+  content: "Stylus";
+}
+#app-mount pre code[class~=avrasm i]:before {
+  content: "AVR Assembler";
+}
+#app-mount pre code[class~=llvm i]:before {
+  content: "LLVM iR";
+}
+#app-mount pre code[class~=mipsasm i]:before {
+  content: "MIPS Assembly";
+}
+#app-mount pre code[class~=x86asm i]:before {
+  content: "Intel x86 Assembly";
+}
+#app-mount pre code[class~=crmsh i]:before {
+  content: "crmsh";
+}
+#app-mount pre code[class~=dns i]:before {
+  content: "DNS Zone File";
+}
+#app-mount pre code[class~=dockerfile i]:before {
+  content: "Dockerfile";
+}
+#app-mount pre code[class~=dsconfig i]:before {
+  content: "dsconfig";
+}
+#app-mount pre code[class~=jboss-cli i]:before {
+  content: "jboss-cli";
+}
+#app-mount pre code[class~=ldif i]:before {
+  content: "LDIF";
+}
+#app-mount pre code[class~="pf.conf" i]:before {
+  content: "pf.conf";
+}
+#app-mount pre code[class~=puppet i]:before {
+  content: "Puppet";
+}
+#app-mount pre code[class~=roboconf i]:before {
+  content: "Roboconf";
+}
+#app-mount pre code[class~=axapta i]:before {
+  content: "Microsoft Dynamics AX";
+}
+#app-mount pre code[class~=cos i]:before {
+  content: "Cache Object Script";
+}
+#app-mount pre code[class~=isbl i]:before {
+  content: "ISBL";
+}
+#app-mount pre code[class~=livecodeserver i]:before {
+  content: "LiveCode";
+}
+#app-mount pre code[class~=ldif i]:before {
+  content: "LDIF";
+}
+#app-mount pre code[class~=ruleslanguage i]:before {
+  content: "Oracle Rules Language";
+}
+#app-mount pre code[class~=clean i]:before {
+  content: "Clean";
+}
+#app-mount pre code[class~=coq i]:before {
+  content: "Coq";
+}
+#app-mount pre code[class~=elixir i]:before {
+  content: "Elixir";
+}
+#app-mount pre code[class~=erlang-repl i]:before {
+  content: "Erlang REPL";
+}
+#app-mount pre code[class~=erlang i]:before {
+  content: "Erlang";
+}
+#app-mount pre code[class~=flix i]:before {
+  content: "Flix";
+}
+#app-mount pre code[class~=fsharp i]:before, #app-mount pre code[class~=fs i]:before {
+  content: "F#";
+}
+#app-mount pre code[class~=haskell i]:before {
+  content: "Haskell";
+}
+#app-mount pre code[class~=ocaml i]:before {
+  content: "OCaml";
+}
+#app-mount pre code[class~=scala i]:before {
+  content: "Scala";
+}
+#app-mount pre code[class~=sml i]:before {
+  content: "SML (Standard ML)";
+}
+#app-mount pre code[class~=xquery i]:before {
+  content: "XQuery";
+}
+#app-mount pre code[class~=glsl i]:before {
+  content: "GLSL";
+}
+#app-mount pre code[class~=mel i]:before {
+  content: "MEL";
+}
+#app-mount pre code[class~=processing i]:before {
+  content: "Processing";
+}
+#app-mount pre code[class~=rib i]:before {
+  content: "RenderMan RIB";
+}
+#app-mount pre code[class~=rsl i]:before {
+  content: "RenderMan RSL";
+}
+#app-mount pre code[class~=armasm i]:before {
+  content: "Arm Assembly";
+}
+#app-mount pre code[class~=asm i]:before, #app-mount pre code[class~=assembly i]:before {
+  content: "Assembly";
+}
