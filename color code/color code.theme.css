@@ -1,0 +1,34 @@
+/**
+ * @name Color your code
+ * @author Bat-Husky
+ * @authorId 467284102987382784
+ * @version 1.0
+ * @description A theme that change the color of your code.
+ * @source https://github.com/Bat-Husky/Theme
+ * @invite kcb3jke
+ */
+
+
+#app-mount pre code .hljs-string {
+  color: #09BF86;
+}
+
+#app-mount pre code .hljs-number {
+  color: #9860EC;
+}
+
+#app-mount pre code .hljs-comment {
+  color: grey;
+}
+
+#app-mount pre code .hljs-keyword {
+  color: #559BF7;
+}
+
+#app-mount pre code .hljs-section {
+  color: #E04848;
+}
+
+#app-mount pre code .hljs-meta {
+  color: #0000FF;
+}
